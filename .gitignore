@@ -1,0 +1,13 @@
+# Virtual environments
+.venv/
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info/
+
+# uv specific (optional, but standard)
+.python-version
