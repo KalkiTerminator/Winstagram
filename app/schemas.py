@@ -1,9 +1,11 @@
 from pydantic import BaseModel
 from datetime import datetime
 from uuid import UUID
+from fastapi_users import schemas
 
 class PostCreate(BaseModel):
-    caption: str
+    title: str
+    content: str
 
 class PostResponse(BaseModel):
     id: UUID
@@ -13,3 +15,14 @@ class PostResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class UserRead(schemas.BaseUser[UUID]):
+    pass
+
+class UserCreate(schemas.BaseUserCreate):
+    pass
+
+class UserUpdate(schemas.BaseUserUpdate):
+    pass
+
