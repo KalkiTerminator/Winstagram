@@ -11,3 +11,8 @@ wheels/
 
 # uv specific (optional, but standard)
 .python-version
+
+# Environment variables
+.env
+.env.*
+!.env.example
